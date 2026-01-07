@@ -145,3 +145,11 @@ input,textarea{
   .nav{display:none;flex-direction:column;align-items:flex-start;padding:10px 0}
   .nav.open{display:flex}
 }
+/* PayPal Services Box */
+.paypal-box{
+  background:#ffffff;
+  border:1px solid #d9e2ec;
+  border-radius:16px;
+  padding:16px;
+  margin-top:16px;
+}
