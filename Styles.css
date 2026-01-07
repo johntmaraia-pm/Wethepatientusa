@@ -158,17 +158,10 @@ input[type="email"]{
   height: 38px;
   font-size: 14px;
 }
-
-/* Make message box bigger */
-textarea{
-  min-height: 180px;
-  font-size: 15px;
-}
-/* Make the message box large and comfortable */
 textarea[name="message"]{
-  min-height: 260px;     /* big writing area */
+  min-height: 280px;
   font-size: 15px;
-  line-height: 1.5;
-  padding: 12px;
+  line-height: 1.6;
+  padding: 14px;
   resize: vertical;
 }
