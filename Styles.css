@@ -153,3 +153,14 @@ input,textarea{
   padding:16px;
   margin-top:16px;
 }
+/* Make email field smaller */
+input[type="email"]{
+  height: 38px;
+  font-size: 14px;
+}
+
+/* Make message box bigger */
+textarea{
+  min-height: 180px;
+  font-size: 15px;
+}
