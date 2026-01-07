@@ -164,3 +164,11 @@ textarea{
   min-height: 180px;
   font-size: 15px;
 }
+/* Make the message box large and comfortable */
+textarea[name="message"]{
+  min-height: 260px;     /* big writing area */
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 12px;
+  resize: vertical;
+}
