@@ -14,7 +14,9 @@
 
   <link rel="stylesheet" href="styles.css" />
 </head>
-
+<script 
+  src="https://www.paypal.com/sdk/js?client-id=BAA_hTpzj6tod2IxpvuYYh4SAz8eMrqKRBxO_1Buv86UOgGZeshWwGiq_hr0DVon4vSSjP473bSTF7lsjk&components=hosted-buttons&enable-funding=venmo&currency=USD">
+</script>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
@@ -63,7 +65,21 @@
         </div>
 
         <!-- PAY NOW (modernized) -->
-        <aside class="pay-card" aria-label="Pay Now">
+        <div class="paypal-box">
+  <h3>Pay for Services</h3>
+  <p class="muted">
+    Enter the agreed payment amount for Registered Nurse Advocacy services.
+    Secure checkout via PayPal, credit card, or Venmo.
+  </p>
+
+  <div id="paypal-container-39KK6QQF2Z8JQ"></div>
+</div>
+
+<script>
+  paypal.HostedButtons({
+    hostedButtonId: "39KK6QQF2Z8JQ",
+  }).render("#paypal-container-39KK6QQF2Z8JQ");
+</script><aside class="pay-card" aria-label="Pay Now">
           <h2>Pay Now</h2>
           <p class="muted">Secure payment via PayPal.</p>
 
