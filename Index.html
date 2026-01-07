@@ -211,22 +211,24 @@
             <h3>Message</h3>
             <!-- Netlify Forms: works automatically when deployed on Netlify -->
             <form name="contact" method="POST" data-netlify="true">
-              <input type="hidden" name="form-name" value="contact" />
-              <label>
-                Name
-                <input name="name" autocomplete="name" required />
-              </label>
-              <label>
-                Email
-                <input name="email" type="email" autocomplete="email" required />
-              </label>
-              <label>
-                Message
-                <textarea name="message" rows="10" required></textarea>
-              </label>
-              <button class="btn" type="submit">Send</button>
-              <p class="tiny muted">Messages will appear in your Netlify dashboard under Forms.</p>
-            </form>
+  <input type="hidden" name="form-name" value="contact" />
+
+  <label>
+    Message
+    <textarea
+      name="message"
+      rows="12"
+      required
+      placeholder="Please include your name, email address, and how I can help you.">
+    </textarea>
+  </label>
+
+  <button class="btn" type="submit">Send</button>
+
+  <p class="tiny muted">
+    Please include your name and email so I can respond.
+  </p>
+</form>
           </div>
         </div>
       </div>
