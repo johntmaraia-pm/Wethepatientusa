@@ -15,7 +15,13 @@
 
   <link rel="stylesheet" href="styles.css" />
 </head>
-
+<!-- Netlify form detection helper (hidden) -->
+<form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="text" name="name" />
+  <input type="email" name="email" />
+  <textarea name="message"></textarea>
+  <input name="bot-field" />
+</form>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
@@ -182,7 +188,7 @@
         <h3>Email & Message</h3>
 
         <p class="big">
-          <a href="mailto:info@wethepatientusa.com">wethepatientusa@gmail.com</a>
+          <a href="mailto:wethepatientusa@gmail.com">wethepatientusa@gmail.com</a>
         </p>
 
 <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/Thank-you/">
