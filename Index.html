@@ -15,13 +15,7 @@
 
   <link rel="stylesheet" href="styles.css" />
 </head>
-<!-- Netlify form detection helper (hidden) -->
-<form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
-  <input type="text" name="name" />
-  <input type="email" name="email" />
-  <textarea name="message"></textarea>
-  <input name="bot-field" />
-</form>
+
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
@@ -68,11 +62,12 @@
         <a class="btn" href="tel:9418068801">Call 941-806-8801</a>
         <a class="btn btn-outline" href="#contact">Contact Me</a>
       </div>
+
       <div class="chips" aria-label="Highlights">
-  <span class="chip">RN Advocacy</span>
-  <span class="chip">Care Navigation</span>
-  <span class="chip">Family Support</span>
-</div>
+        <span class="chip">RN Advocacy</span>
+        <span class="chip">Care Navigation</span>
+        <span class="chip">Family Support</span>
+      </div>
     </div>
 
     <!-- PAY NOW -->
@@ -191,23 +186,26 @@
           <a href="mailto:wethepatientusa@gmail.com">wethepatientusa@gmail.com</a>
         </p>
 
-<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/Thank-you/">
-  <input type="hidden" name="form-name" value="contact" />
-  <input type="hidden" name="redirect" value="/Thank-you/" />
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/Thank-you/">
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="redirect" value="/Thank-you/" />
 
-  <p style="display:none;">
-    <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-  </p>
-          
-          <label>Name
+          <p style="display:none;">
+            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+          </p>
+
+          <label>
+            Name
             <input name="name" required />
           </label>
 
-          <label>Email
+          <label>
+            Email
             <input type="email" name="email" required />
           </label>
 
-          <label>Message
+          <label>
+            Message
             <textarea name="message" rows="10" required></textarea>
           </label>
 
@@ -226,14 +224,22 @@
   </div>
 </footer>
 
+<!-- Netlify form detection helper (hidden) -->
+<form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="text" name="name" />
+  <input type="email" name="email" />
+  <textarea name="message"></textarea>
+  <input name="bot-field" />
+</form>
+
 <script src="https://www.paypal.com/sdk/js?client-id=BAA_hTpzj6tod2IxpvuYYh4SAz8eMrqKRBxO_1Buv86UOgGZeshWwGiq_hr0DVon4vSSjP473bSTF7lsjk&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
 
 <script>
-paypal.HostedButtons({
-  hostedButtonId: "39KK6QQF2Z8JQ",
-}).render("#paypal-container-39KK6QQF2Z8JQ");
+  paypal.HostedButtons({
+    hostedButtonId: "39KK6QQF2Z8JQ",
+  }).render("#paypal-container-39KK6QQF2Z8JQ");
 
-document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
