@@ -191,7 +191,7 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section">
+<section id="contact" class="section">
       <div class="container">
         <h2>Contact Us</h2>
 
@@ -202,34 +202,44 @@
             <p class="muted tiny">If we miss you, please leave a voicemail.</p>
           </div>
 
-          <div class="card">
-            <h3>Email</h3>
-            <p class="big"><a href="mailto:wethepatientusa@gmail.com">info@wethepatientusa.com</a></p>
-          </div>
+<div class="card">
+  <h3>Email & Message</h3>
 
-          <div class="card">
-            <h3>Message</h3>
-            <!-- Netlify Forms: works automatically when deployed on Netlify -->
-            <form name="contact" method="POST" data-netlify="true">
-  <input type="hidden" name="form-name" value="contact" />
-
-  <label>
-    Message
-    <textarea
-      name="message"
-      rows="12"
-      required
-      placeholder="Please include your name, email address, and how I can help you.">
-    </textarea>
-  </label>
-
-  <button class="btn" type="submit">Send</button>
-
-  <p class="tiny muted">
-    Please include your name and email so I can respond.
+  <p class="big">
+    <a href="mailto:info@wethepatientusa.com">info@wethepatientusa.com</a>
   </p>
-</form>
-          </div>
+
+  <!-- Netlify Forms -->
+  <form name="contact" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="contact" />
+
+    <label>
+      Name
+      <input name="name" autocomplete="name" required />
+    </label>
+
+    <label>
+      Email
+      <input name="email" type="email" autocomplete="email" required />
+    </label>
+
+    <label>
+      Message
+      <textarea
+        name="message"
+        rows="12"
+        required
+        placeholder="How can I help you?">
+      </textarea>
+    </label>
+
+    <button class="btn" type="submit">Send</button>
+
+    <p class="tiny muted">
+      Please include your name and email so I can respond.
+    </p>
+  </form>
+</div> 
         </div>
       </div>
     </section>
