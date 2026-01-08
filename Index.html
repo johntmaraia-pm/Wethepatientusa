@@ -13,7 +13,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://wethepatientusa.com/" />
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body>
@@ -31,14 +31,11 @@
       </div>
     </div>
 
-    <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">Menu</button>
-
-    <nav id="site-nav" class="nav">
+    <nav class="nav">
       <a href="#home">Home</a>
       <a href="#fees">Consult Fees</a>
       <a href="#testimonials">Patient Testimonials</a>
       <a href="#contact">Contact Us</a>
-      <a class="nav-cta" href="#medical-form">Client Medical Form</a>
     </nav>
   </div>
 </header>
@@ -63,32 +60,26 @@
         <a class="btn btn-outline" href="#contact">Contact Me</a>
       </div>
 
-      <div class="chips" aria-label="Highlights">
+      <div class="chips">
         <span class="chip">RN Advocacy</span>
         <span class="chip">Care Navigation</span>
         <span class="chip">Family Support</span>
       </div>
     </div>
 
-    <!-- PAY NOW -->
+    <!-- PAYPAL -->
     <aside class="pay-card">
       <h2>Pay for Services</h2>
       <p class="muted">
-        Enter the agreed payment amount for RN Advocacy services.
-        Secure checkout via PayPal, credit card, or Venmo.
+        Secure payment via PayPal, credit card, or Venmo.
       </p>
-
       <div id="paypal-container-39KK6QQF2Z8JQ"></div>
-
-      <p class="tiny muted">
-        You will be prompted to enter the payment amount.
-      </p>
     </aside>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section">
+<section class="section">
   <div class="container">
     <h2>About Me</h2>
 
@@ -96,7 +87,7 @@
       <div class="card">
         <h3>My Background</h3>
         <p>
-          Registered Nurse with 30+ years of experience including Med-Surg,
+          Registered Nurse with 30+ years of experience across Med-Surg,
           Cardiovascular, Oncology, GI, Wound Care, and RN Advocacy.
         </p>
       </div>
@@ -105,7 +96,7 @@
         <h3>My Goals</h3>
         <p>
           To help patients and families navigate the healthcare system with
-          clarity, confidence, and compassion.
+          clarity and confidence.
         </p>
       </div>
 
@@ -120,55 +111,8 @@
   </div>
 </section>
 
-<!-- FEES -->
-<section id="fees" class="section section-alt">
-  <div class="container">
-    <h2>Consult Fees</h2>
-
-    <div class="grid-3">
-      <div class="card">
-        <h3>Initial Consult</h3>
-        <p class="price">$___</p>
-      </div>
-
-      <div class="card">
-        <h3>Ongoing Support</h3>
-        <p class="price">$___ / hour</p>
-      </div>
-
-      <div class="card">
-        <h3>Document Review</h3>
-        <p class="price">$___</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section id="testimonials" class="section">
-  <div class="container">
-    <h2>Patient Testimonials</h2>
-
-    <div class="grid-3">
-      <blockquote class="quote">“Clear, compassionate guidance when we needed it most.”</blockquote>
-      <blockquote class="quote">“Helped us understand our options and next steps.”</blockquote>
-      <blockquote class="quote">“Reduced stress and gave us peace of mind.”</blockquote>
-    </div>
-  </div>
-</section>
-
-<!-- MEDICAL FORM -->
-<section id="medical-form" class="section section-alt">
-  <div class="container">
-    <h2>Client Medical Form</h2>
-    <p class="muted">
-      <a class="btn btn-outline" href="#" aria-disabled="true">Open Client Medical Form</a>
-    </p>
-  </div>
-</section>
-
 <!-- CONTACT -->
-<section id="contact" class="section">
+<section id="contact" class="section section-alt">
   <div class="container">
     <h2>Contact Us</h2>
 
@@ -176,22 +120,29 @@
       <div class="card">
         <h3>Call</h3>
         <p class="big"><a href="tel:9418068801">941-806-8801</a></p>
-        <p class="muted tiny">If we miss you, please leave a voicemail.</p>
+        <p class="tiny muted">If we miss you, please leave a voicemail.</p>
       </div>
 
       <div class="card">
         <h3>Email & Message</h3>
-
         <p class="big">
           <a href="mailto:wethepatientusa@gmail.com">wethepatientusa@gmail.com</a>
         </p>
 
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/Thank-you/">
+        <!-- NETLIFY FORM -->
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/Thank-you/"
+        >
           <input type="hidden" name="form-name" value="contact" />
-          <input type="hidden" name="redirect" value="/Thank-you/" />
 
           <p style="display:none;">
-            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+            <label>Don’t fill this out if you’re human:
+              <input name="bot-field" />
+            </label>
           </p>
 
           <label>
@@ -224,14 +175,7 @@
   </div>
 </footer>
 
-<!-- Netlify form detection helper (hidden) -->
-<form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
-  <input type="text" name="name" />
-  <input type="email" name="email" />
-  <textarea name="message"></textarea>
-  <input name="bot-field" />
-</form>
-
+<!-- PAYPAL -->
 <script src="https://www.paypal.com/sdk/js?client-id=BAA_hTpzj6tod2IxpvuYYh4SAz8eMrqKRBxO_1Buv86UOgGZeshWwGiq_hr0DVon4vSSjP473bSTF7lsjk&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
 
 <script>
